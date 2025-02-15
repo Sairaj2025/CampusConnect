@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - CampusConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .navbar {
+            background: #4b0082 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            color: #333;
+        }
+        .btn-dark {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="Homepage.html">CampusConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="eventlist.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-light text-dark px-3" href="loginpage.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="text-center mb-4">Register for an Event</h2>
+        <form id="eventRegistrationForm">
+            <div class="mb-3">
+                <label for="userName" class="form-label">Full Name</label>
+                <input type="text" id="userName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" id="userEmail" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="eventSelect" class="form-label">Select Event</label>
+                <select id="eventSelect" class="form-control">
+                    <option value="Tech Seminar">Tech Seminar</option>
+                    <option value="Coding Workshop">Coding Workshop</option>
+                    <option value="Annual Conference">Annual Conference</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-dark">Register</button>
+        </form>
+    </div>
+
+    <script>
+        // Retrieve user data from localStorage
+        let storedUserData = localStorage.getItem("userData");
+        if (storedUserData) {
+            let user = JSON.parse(storedUserData);
+            document.getElementById("userName").value = user.fullName;
+            document.getElementById("userEmail").value = user.email;
+        }
+
+        document.getElementById("eventRegistrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Event Registered Successfully!");
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

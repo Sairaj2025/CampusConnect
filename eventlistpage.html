@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - CampusConnect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .navbar {
+            background: #4b0082 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #ffaf7b !important;
+        }
+        .banner {
+            background: rgba(0, 0, 0, 0.6);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .banner h1 {
+            color: #ffaf7b;
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #d76d77;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .card {
+            transition: transform 0.3s ease-in-out;
+            height: 100%;
+            background: #fff;
+            color: #333;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">CampusConnect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="eventlistpage.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-light text-dark px-3" href="loginpage.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="banner text-center">
+        <h1>Upcoming Events</h1>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4 d-flex">
+                <div class="card w-100">
+                    <img src="techseminar.jpg" class="card-img-top" alt="Tech Seminar">
+                    <div class="card-body">
+                        <h5 class="card-title">Tech Seminar</h5>
+                        <p class="card-text">Join us for an exciting seminar on emerging technologies.</p>
+                        <a href="eventdetails.html" class="btn btn-dark mt-auto">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card w-100">
+                    <img src="Coadingworkshopimg.jpg" class="card-img-top" alt="Coding Workshop">
+                    <div class="card-body">
+                        <h5 class="card-title">Coding Workshop</h5>
+                        <p class="card-text">Learn coding from experts in this hands-on workshop.</p>
+                        <a href="#" class="btn btn-dark mt-auto">Register</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card w-100">
+                    <img src="conference.png" class="card-img-top" alt="Annual Conference">
+                    <div class="card-body">
+                        <h5 class="card-title">Annual Conference</h5>
+                        <p class="card-text">A gathering of great minds discussing the future of education.</p>
+                        <a href="#" class="btn btn-dark mt-auto">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
